@@ -1,96 +1,126 @@
-# Food app
+# Swiggy Clone App
 
-/\*\* \***App Structure (Planning)**\*\*
+This project is an assignment completed while working through the **Namaste React** course.
 
-- Header
-- - Logo
-- - Nav items
-- Body
-- - Search
-- - Restraunt Container
-- - Restraunt Card
-- - Img
-- - Name of res, star rating, cuisine, delivery time
-- Footer
-- - Copyright
-- - Links
-- - Address
-- - Contact
-    \*/
+## App Structure (Planning)
 
-# React Hooks
+- **Header**
+  - Logo
+  - Navigation Items
+- **Body**
+  - Search
+  - Restaurant Container
+  - Restaurant Card
+    - Image
+    - Restaurant Name, Star Rating, Cuisine, Delivery Time
+- **Footer**
+  - Copyright
+  - Links
+  - Address
+  - Contact
 
-(Normal JS Utility functions)
+---
 
-- useState() - To update states of variable and to trigger render reconcialiation cycle
-- useEffect() - This will call once render cycle is completed. This can be used to call API.
-  - if called with []. it will call once
-  - if called without any argument, it will be called everytime render triggered.
-  - if called with any perticular state : [myObject] : then it will call whenever myObject is updated and render cycle is triggered.
-  - to unmount (destroy) subscriptions, we can use return () =>{ //Write your destroy code here }
+## React Notes
 
-## Custom Hooks
+**Important information to review before attempting interviews:**
 
-Custom hooks more are like services. We can write reusable code in custom hooks and that can be used in multiple components.
+### React Hooks
 
-# React Fiber
+(Normal JavaScript utility functions)
 
-Must read for understaing React fiber in depth :
-https://github.com/acdlite/react-fiber-architecture
+- `useState()` - Used to update state variables and trigger the render reconciliation cycle.
+- `useEffect()` - Called once the render cycle is completed. Often used to call APIs.
+  - If called with `[]`, it will only run once.
+  - If called without any argument, it runs every time the render is triggered.
+  - If called with a specific state: `[myObject]`, it will run whenever `myObject` is updated, triggering a render cycle.
+  - To clean up (destroy) subscriptions or listeners, you can use:
+    ```js
+    return () => {
+      // Write your cleanup code here
+    };
+    ```
 
-How react state or hooks work?
+### Custom Hooks
 
-1. React uses reconcialiation method to compute between old and new dom objects. This computation means, Finding diff between old and new dom object.
-2. This computed diff is getting used by renderer which updates and renders the dom based on the diff.
-3. This Algorithm is know as React fiber.
+Custom hooks are like services. You can write reusable logic in a custom hook and use it in multiple components.
 
-# Bundling application
+---
 
-# Lazy Loading/On Demand Loading
+## React Fiber
 
-    use lazy. import from react
-    use suspense in routing (See in app.js)
+To deeply understand React Fiber, refer to this resource:  
+[React Fiber Architecture](https://github.com/acdlite/react-fiber-architecture)
 
-# Ways to add css
+### How do React state and hooks work?
 
-SCSS
-SASS
-Styled Component
-Material UI
-Chakra UI
-tailwind
+1. React uses the **reconciliation** method to compute the difference between the old and new DOM objects.
+2. This computed "diff" is then used by the renderer, which updates the DOM based on these differences.
+3. This process is part of the **React Fiber** algorithm.
 
-# Higher order components
+---
 
-1. Is a function it takes a component and returns a component.
+## Bundling the Application
 
-# Config driven UI :
+---
 
-    1. Data is config
-    2. UI changes according to the configuration.
+## Lazy Loading / On-Demand Loading
 
-# LifeCycle :
+- Use `React.lazy()` for lazy loading components.
+- Utilize `Suspense` in routing (check `App.js` for implementation).
 
-Constructor
-Render
-ComponentDidMount
-ComponentDidUpdate
-ComponentWillUnmount
+---
 
-# Other Important Interview topics
+## Ways to Add CSS
 
-1. event loop
-2. virtual dom
-3. v6 features
-4. useRef hooks
-5. useContext
-6. optimization technqs
-7. error handling, errorBoundry,
-8. try catch
-9. axios
-10. angular vs react
-11. js
-12. promises
-13. debounce
-14. using hook debounce/lodash implementation
-15. custom hooks
+- SCSS
+- SASS
+- Styled Components
+- Material UI
+- Chakra UI
+- Tailwind CSS
+
+---
+
+## Higher-Order Components (HOC)
+
+A **Higher-Order Component** is a function that takes a component and returns a new component.
+
+---
+
+## Config-Driven UI
+
+1. Data is configuration.
+2. The UI changes according to the configuration.
+
+---
+
+## React Lifecycle Methods
+
+- `constructor`
+- `render`
+- `componentDidMount`
+- `componentDidUpdate`
+- `componentWillUnmount`
+
+---
+
+## Other Important Interview Topics
+
+1. Event Loop
+2. Virtual DOM
+3. React v6 Features
+4. `useRef` Hook
+5. `useContext`
+6. Optimization Techniques
+7. Error Handling, Error Boundaries
+8. `try...catch`
+9. Axios
+10. Angular vs. React
+11. JavaScript
+12. Promises
+13. Debounce
+14. Using hook debounce/lodash implementation
+15. Custom Hooks
+
+---
